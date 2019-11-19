@@ -1,0 +1,14 @@
+
+
+
+CC=g++
+CFLAGS= -std=c++11 -pthread
+
+%.o: %.cpp
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+ALL: helloThreads.o
+	$(CC) -o helloThreads helloThreads.o $(CFLAGS)
+
+CLEAN:
+	rm *.o

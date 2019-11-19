@@ -1,0 +1,13 @@
+gdb commands
+
+	list [number]: list the source code arround the specific number line.
+	list <function>: list the source code of the specific function.
+	
+	run: to run the executable file with debug mode
+	
+	break <function>: add the breakpoint at the specific function name
+	break [number]: add the breakpoint at the specific number line.
+
+	next: execute the next line code.
+
+	step: if the code line is function, then enter the function.

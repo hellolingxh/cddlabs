@@ -1,0 +1,10 @@
+
+
+CC=g++ 
+CFLAGS= -std=c++11 -g -O0
+
+SIMPLE:	printf.cpp 
+	$(CC) $(CFLAGS) printf.cpp -o myprintf
+
+CLEAN: 
+	rm *.o

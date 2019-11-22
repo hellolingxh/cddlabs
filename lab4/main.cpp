@@ -14,14 +14,14 @@ int sharedVariable=0;
 */
 /*! displays a message that is split in to 2 sections to show how a rendezvous works*/
 void updateTask(std::shared_ptr<Semaphore> firstSem, int numUpdates){
-  if(sharedVariable !=0) 
+  if(sharedVariable !=0) //if it have not any thread enter before, then it need not to wait
     firstSem->Wait();
   for(int i=0;i<numUpdates;i++){
     //UPDATE SHARED VARIABLE HERE!
     sharedVariable++;
     std::cout << "the thread id is " << std::this_thread::get_id() << " the value is " << sharedVariable << std::endl;
   }
-  firstSem->Signal();
+  firstSem->Signal();//if the update task complete, then release the lock by using signal
 }
 
 

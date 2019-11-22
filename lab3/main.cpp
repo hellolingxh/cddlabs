@@ -12,8 +12,8 @@ void taskOne(std::shared_ptr<Semaphore> firstSem,std::shared_ptr<Semaphore>  sec
   std::this_thread::sleep_for(std::chrono::seconds(delay));
   std::cout <<"Task One has arrived! "<< std::endl;
   //THIS IS THE RENDEZVOUS POINT!
-  firstSem.get()->Signal();
-  secondSem.get()->Wait();
+  firstSem->Signal();//to notify the main thread that the threadOne unlock by the first semaphore 
+  secondSem->Wait();// to notify the main thread that the threadTwo was resumed if it receive the signal
   std::cout << "Task One has left!"<<std::endl;
 }
 /*! displays a message that is split in to 2 sections to show how a rendezvous works*/
@@ -21,8 +21,8 @@ void taskTwo(std::shared_ptr<Semaphore> firstSem, std::shared_ptr<Semaphore> sec
   std::this_thread::sleep_for(std::chrono::seconds(delay));
   std::cout <<"Task Two has arrived "<<std::endl;
   //THIS IS THE RENDEZVOUS POINT!
-  secondSem.get()->Signal();
-  firstSem.get()->Wait();
+  secondSem->Signal();//to notify the main thread that the threadTwo unlock by the second semaphore
+  firstSem->Wait();// to notify the main thread that the threadOne was resumed if it receive the signal
   std::cout << "Task Two has left "<<std::endl;
 }
 

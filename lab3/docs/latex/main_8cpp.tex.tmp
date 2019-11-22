@@ -1,0 +1,46 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include \char`\"{}Semaphore.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$thread$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a9141e3eb0b1274e58b053fd8a60a94e3}{task\+One} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ first\+Sem, std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ second\+Sem, int delay)
+\item 
+void \hyperlink{main_8cpp_ac7cb6b39082835c7e3c853c42af9ecdc}{task\+Two} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ first\+Sem, std\+::shared\+\_\+ptr$<$ \hyperlink{class_semaphore}{Semaphore} $>$ second\+Sem, int delay)
+\item 
+int \hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}
+$<$ Launch the threads \index{main.\+cpp@{main.\+cpp}!task\+One@{task\+One}}
+\index{task\+One@{task\+One}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{task\+One(std\+::shared\+\_\+ptr$<$ Semaphore $>$ first\+Sem, std\+::shared\+\_\+ptr$<$ Semaphore $>$ second\+Sem, int delay)}{taskOne(std::shared_ptr< Semaphore > firstSem, std::shared_ptr< Semaphore > secondSem, int delay)}}]{\setlength{\rightskip}{0pt plus 5cm}void task\+One (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Semaphore} $>$}]{first\+Sem, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Semaphore} $>$}]{second\+Sem, }
+\item[{int}]{delay}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_a9141e3eb0b1274e58b053fd8a60a94e3}{}\label{main_8cpp_a9141e3eb0b1274e58b053fd8a60a94e3}
+displays a message that is split in to 2 sections to show how a rendezvous works \index{main.\+cpp@{main.\+cpp}!task\+Two@{task\+Two}}
+\index{task\+Two@{task\+Two}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{task\+Two(std\+::shared\+\_\+ptr$<$ Semaphore $>$ first\+Sem, std\+::shared\+\_\+ptr$<$ Semaphore $>$ second\+Sem, int delay)}{taskTwo(std::shared_ptr< Semaphore > firstSem, std::shared_ptr< Semaphore > secondSem, int delay)}}]{\setlength{\rightskip}{0pt plus 5cm}void task\+Two (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Semaphore} $>$}]{first\+Sem, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Semaphore} $>$}]{second\+Sem, }
+\item[{int}]{delay}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_ac7cb6b39082835c7e3c853c42af9ecdc}{}\label{main_8cpp_ac7cb6b39082835c7e3c853c42af9ecdc}
+displays a message that is split in to 2 sections to show how a rendezvous works 

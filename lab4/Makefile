@@ -4,7 +4,7 @@
 #It will produce the execution file named mutualExclusion if you run the command 'make Makefile'
 
 CC=g++
-CFLAGS= -std=c++11 -pthread
+CFLAGS= -std=c++11 -pthread -g -O0
 
 #This rule says that each .o file depends on a .cpp file of the same name
 %.o: %.cpp

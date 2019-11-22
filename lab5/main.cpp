@@ -13,7 +13,9 @@ int sharedVariable=0;
 */
 /*! displays a message that is split in to 2 sections to show how a rendezvous works*/
 void barrierTask(std::shared_ptr<Barrier> theBarrier, int numLoops){
-  for(int i=0;i<numLoops;++i){
+//  std::cout << "test" << std::endl;
+ for(int i=0;i<numLoops;++i){
+    sharedVariable++; 
     //Do first bit of task
     std::cout << "A"<< i;
     //Barrier
@@ -22,7 +24,6 @@ void barrierTask(std::shared_ptr<Barrier> theBarrier, int numLoops){
     std::cout<< "B" << i;
     theBarrier->wait();
   }
-  
 
 }
 
@@ -39,6 +40,7 @@ int main(void){
   for (auto& v :vt){
       v.join();
   }
+  std::cout << std::endl;
   std::cout << sharedVariable << std::endl;
   return 0;
 }

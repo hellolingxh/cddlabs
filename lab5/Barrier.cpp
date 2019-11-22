@@ -47,33 +47,59 @@
 #include "Semaphore.h"
 #include "Barrier.h"
 #include <iostream>
-static Semaphore theSemaphore;
-static int count = 0;
+
 Barrier::Barrier(int numThreads):
 	numThreads(numThreads)
 {
-	/** NOTHING TO DO HERE */ 
+	this->numThreads = numThreads;
+	this->count = 0;
+	this->theLock.reset(new Semaphore(1));
+	this->turnstile1.reset(new Semaphore(0));
+	this->turnstile2.reset(new Semaphore(1));
 }
 
 Barrier::~Barrier()
 {
-	/** NOTHING TO DO HERE */ 
+	this->theLock.reset();
+	this->turnstile1.reset();
+	this->turnstile2.reset();
 }
 
 
-void Barrier::wait()
+void Barrier::phase1()
 {
-	
+	this->theLock->Wait();	
 	++count;
 	if(count==numThreads)
 	{
-		theSemaphore.Wait();
+		this->turnstile2->Wait();
+		this->turnstile1->Signal();
 	}
-	theSemaphore.Signal();	
-
+	this->theLock->Signal();
+	this->turnstile1->Wait();
+	this->turnstile1->Signal();
 	
 }
 
+void Barrier::phase2()
+{
+	this->theLock->Wait();	
+	--count;
+	if(count==0)
+	{
+		this->turnstile1->Wait();
+		this->turnstile2->Signal();
+	}
+	this->theLock->Signal();
+	this->turnstile2->Wait();
+	this->turnstile2->Signal();
+	
+}
+
+void Barrier::wait()
+{
+	phase1();
+	phase2();
+}
  
-// 
 // Barrier.cpp ends here

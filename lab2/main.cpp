@@ -14,11 +14,11 @@ void taskOne(std::shared_ptr<Semaphore> theSemaphore, int delay){
   std::cout << "must ";
   std::cout << "print ";
   std::cout << "first"<<std::endl;
-  theSemaphore.get()->Signal();
+  theSemaphore.get()->Signal();//if the taskOne completed,then notify the main thread to resume the threadTwo
 }
 /*! displays a message second*/
 void taskTwo(std::shared_ptr<Semaphore> theSemaphore){
-  theSemaphore.get()->Wait();
+  theSemaphore.get()->Wait();//it will wait until it receive the signal sent by threadOne
   std::cout <<"This ";
   std::cout << "will ";
   std::cout << "appear ";

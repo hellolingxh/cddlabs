@@ -3,7 +3,7 @@
  * Filename: Message.cpp
  * Author: Xiaohui Ling / C00212235
  * Description: This is a class implement the Message.h interface.
-
+ */
 /* Code: */
 
 #include "Message.h"

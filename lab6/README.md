@@ -14,13 +14,13 @@ Create a program that has two parts. A producer and a consumer.
 - Semaphore.cpp
   - The implementation file for the Semaphore class. This file is provided for your use. Make sure you understand how it works.
 - Message.h
-  - This is a class implement the Message.h interface.
-- Message.cpp
   - This is a class for Message Object to keep the value of the character. 
+- Message.cpp
+  - This is a class implement the Message.h interface.
 - MessageBuffer.h
   - This is a class implement the MessageBuffer.h interface.
 - MessageBuffer.cpp
-  - This is a buffer to keep the Message instance object.
+  - This is a class implement the MessageBuffer.h interface.
 - main.cpp
   - The file containing the main function. This main function must create at least two threads demonstrating Producer and Consumer sync works in action.
 - Makefile

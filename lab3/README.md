@@ -1,8 +1,7 @@
 # Lab Three: Rendezvous
 
 ## Description
-It is an executable program that must create at least two threads demonstrating a rendezvous in action using
-a common Semaphore.
+It is an executable program that must create at least two threads demonstrating a rendezvous in action using a common Semaphore.Using the Semaphore class create a program that demonstrates the Rendezvous pattern. A rendezvous occurs between two threads when there is a point (in the code) that both threads must reach before either can continue. (A meeting point or checkpoint)
 
 We will need the following files to complete this lab.
 - **Semaphore.h** The header file for the Semaphore class. This file is provided for your use. Make sure you understand how it works.

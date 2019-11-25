@@ -20,7 +20,7 @@ and then you can use the **make** command within linux
 ```
 $ make
 ```
-Of course, you can also try the other makefiles such as Makefile, Makefile2, Makefile3 and Makefile.
+Of course, you can also try the other makefiles such as Makefile, Makefile2, Makefile3 and Makefile4.
 
 ## Debugger
 There is a dugger command within linux.

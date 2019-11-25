@@ -20,6 +20,10 @@ and then you can run the executable program with the command:
 ```
 $ ./signal
 ```
+If you want to clean the target object of the c++ source code compilation, you can do like this:
+```
+$ make CLEAN
+```
 
 ## Debugger
 There is a dugger command within linux.

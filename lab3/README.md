@@ -25,8 +25,6 @@ $ make CLEAN
 ```
 
 ## Debbuger
-
-## Debugger
 There is a dugger command within linux.
 
 - gdb commands

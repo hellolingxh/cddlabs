@@ -1,4 +1,4 @@
-Lab Three: Rendezvous
+# Lab Three: Rendezvous
 
 ## Description
 It is an executable program that must create at least two threads demonstrating a rendezvous in action using

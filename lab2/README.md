@@ -4,7 +4,7 @@
 It need to create a program that must create at least two threads where one thread signals the other using a common Semaphore.
 We will need the following files to complete this lab.
 
-- **Semaphore.h* The header file for the Semaphore class. This file is provided for your use. Make sure you understand how it works.
+- **Semaphore.h** The header file for the Semaphore class. This file is provided for your use. Make sure you understand how it works.
 - **Semaphore.cpp** The implementation file for the Semaphore class. This file is provided for your use. Make sure you understand how it works.
 - **main.cpp** The file containing the main function. This main function must create at least two threads where one thread signals the other using a common Semaphore. In this lab this is where all your code will go.
 - **Makefile** This is the project file. It contains rules that tell the system how to compile the code and produce a working executable called **signal**.
